@@ -37,33 +37,3 @@ Step 1 - Run the Application
 Step 2 - Enter Different Types of messages includind HAM messages, SPAM messages and with MIXED (HAM+SPAM) messages.
 Step 3 - Try multiple inputs repeatedly.
 Step 4 - Check Error Handling.
-
-
-       
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-       
-Step 3: Run the classifier
-       pyhton main.py
-Step 4: Enter the mesaage to classify 
-ex - You won a free iPhone !Click this link now.
-    
