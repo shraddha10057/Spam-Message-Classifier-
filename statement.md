@@ -16,4 +16,3 @@ Like - Mobile (Non-Tech) users.
 4. Real time message testing.
 5. High Prediction Accuracy 
 6. Error Handling.
-7. 
