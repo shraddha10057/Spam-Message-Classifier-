@@ -1,0 +1,31 @@
+import re
+
+class ScamMessageClassifier:
+    def __init__(self):
+        # Basic scam keywords - can be extended or replaced by ML model
+        self.scam_keywords = [
+            "win", "prize", "free", "cash", "urgent", "congratulations", 
+            "gift", "limited time", "offer", "click here", "risk-free", "guaranteed"
+        ]
+
+    def is_scam(self, message: str) -> bool:
+        """
+        Simple keyword-based detection of scam messages.
+        Returns True if any scam keywords are found (case insensitive).
+        """
+        message = message.lower()
+        for keyword in self.scam_keywords:
+            if re.search(r"\\b" + re.escape(keyword) + r"\\b", message):
+                return True
+        return False
+
+if __name__ == "__main__":
+    classifier = ScamMessageClassifier()
+    test_messages = [
+        "Congratulations! You win a free prize now!",
+        "Hello, how are you doing today?",
+        "Limited time offer, click here!",
+        "Let's meet for lunch tomorrow."
+    ]
+    for msg in test_messages:
+        print(f"Message: \"{msg}\" - Scam: {classifier.is_scam(msg)}")
